@@ -10,6 +10,11 @@ app.get("/", (req, res) => {
   res.send("Home page");
 });
 
+app.get("/r/:subreddit", (req, res) => {
+  const { subreddit } = req.params;
+  res.send(`<h1> You are browsing the ${subreddit}</h1>`);
+});
+
 app.get("/about", (req, res) => {
   res.send("About page");
 });
