@@ -18,6 +18,14 @@ app.get("/contact", (req, res) => {
   res.send("Contact Us");
 });
 
+app.post("/contact", (req, res) => {
+  res.send("Thank you for contacting us! We'll get back to you soon!");
+});
+
+app.get("*", (req, res) => {
+  res.send("Sorry I don't have what you're looking for!");
+});
+
 app.listen(3000, () => {
   console.log("LISTENING ON PORT 3000!");
 });
